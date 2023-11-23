@@ -2,7 +2,6 @@ const userService = require('./userServices');
 
 const create = async (req, res) => {
     try {
-        console.log(req.body);
         const result = await userService.create(req.body);
         if (result.status) {
             res.send({"status": true, "message": "Usuario creado"});
@@ -17,7 +16,6 @@ const create = async (req, res) => {
 
 const login = async (req, res) => {
     try {
-        console.log(req.body);
         const result = await userService.login(req.body);
         if (result.status) {
             res.send({"status": true, "message": result.msg});
