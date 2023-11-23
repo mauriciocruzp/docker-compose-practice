@@ -15,9 +15,9 @@ services:
     ports:
       - "27017:27017"
   frontend:
-    container_name: front
+    container_name: frontend
     restart: always
-    build: ./front
+    build: ./frontend
     ports:
       - "5173:5173"
     links:
